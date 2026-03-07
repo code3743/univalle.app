@@ -20,8 +20,8 @@ const canonicalUrl = new URL(path, Astro.url).toString()
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
+		<link rel="icon" href="src/assets/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
@@ -31,7 +31,7 @@ const canonicalUrl = new URL(path, Astro.url).toString()
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:image" content={new URL('/favicon.svg', Astro.url).toString()} />
+		<meta property="og:image" content={new URL('src/assets/favicon.svg', Astro.url).toString()} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
