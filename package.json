@@ -13,8 +13,5 @@
     "astro": "^5.17.1",
     "tailwindcss": "^4.2.1"
   },
-  "devDependencies": {
-    "@types/node": "^25.3.5"
-  },
   "packageManager": "pnpm@10.30.1"
 }

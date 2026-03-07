@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
-const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +10,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: "https://code3743.github.io",
-  base: isGitHubActions ? "/univalle.app/" : "/",
+  base: "/univalle.app/"
 });
