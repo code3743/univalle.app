@@ -24,8 +24,8 @@ navLinks.forEach(link => {
   link.addEventListener('click', (event) => {
 	const href = link.getAttribute('href');
 	const baseUrl = import.meta.env.BASE_URL || '/';
-	const pathWithoutBase = window.location.pathname.replace(baseUrl, '/');
-	if (pathWithoutBase === '/privacy' && (href === '#features' || href === '#screenshots')) {
+	const pathWithoutBase = window.location.pathname.replace(baseUrl, '/').replaceAll('/', '');
+	if (pathWithoutBase === 'privacy' && (href === '#features' || href === '#screenshots')) {
 	  event.preventDefault();
 	  window.location.href = `${baseUrl}${href}`;
 	}
