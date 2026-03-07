@@ -1,5 +1,5 @@
 <section class="relative overflow-hidden">
-	<div class="pointer-events-none absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-emerald-400/20 blur-3xl"></div>
+	<div class="pointer-events-none absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-[#EE322F]/20 blur-3xl"></div>
 	<div class="mx-auto grid w-full max-w-6xl gap-10 px-4 pb-14 pt-12 sm:px-6 md:grid-cols-2 md:items-center md:pt-16">
 		<div>
 			<div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs text-slate-300">
@@ -11,22 +11,23 @@
 				Aplicación no oficial de la Universidad del Valle diseñada para facilitar el acceso de estudiantes a su información académica real en un solo lugar.
 			</p>
 			<div class="mt-7 flex flex-col gap-3 sm:flex-row">
-				<a href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:scale-[1.02] hover:bg-slate-100">
-					App Store
-				</a>
-				<a href="#" class="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] hover:bg-white/10">
-					Google Play
+				<a href="#" aria-label="Descargar desde Google Play" class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/25 bg-white/5 text-white transition hover:scale-[1.02] hover:border-[#EE322F] hover:bg-white/10">
+					<svg viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
+						<path d="M3 2.5v19l10.1-9.5L3 2.5Z" fill="#34A853" />
+						<path d="M13.1 12 16.5 8.8l4.4 2.5c1.4.8 1.4 2.9 0 3.7l-4.4 2.5-3.4-3.2Z" fill="#FBBC04" />
+						<path d="M3 2.5 16.5 8.8 13.1 12 3 2.5Z" fill="#4285F4" />
+						<path d="M3 21.5 13.1 12l3.4 3.2L3 21.5Z" fill="#EA4335" />
+					</svg>
 				</a>
 			</div>
 		</div>
 
 		<div class="mx-auto flex w-full max-w-sm justify-center md:justify-end">
-			<div class="relative h-[844px] w-[390px] max-h-[540px] max-w-[250px] overflow-hidden rounded-[2.5rem] border border-white/20 bg-slate-900 shadow-2xl shadow-black/40 sm:max-h-[700px] sm:max-w-[300px] md:max-h-none md:max-w-[390px]">
-				<div class="absolute inset-0 bg-gradient-to-b from-emerald-400/15 via-slate-900 to-slate-900"></div>
+			<div class="relative h-211 w-97.5 max-h-135 max-w-62.5 overflow-hidden rounded-[2.5rem] border border-white/20 bg-slate-900 shadow-2xl shadow-black/40 sm:max-h-175 sm:max-w-75 md:max-h-none md:max-w-97.5">
+				<div class="absolute inset-0 bg-linear-to-b from-[#EE322F]/15 via-slate-900 to-slate-900"></div>
 				<div class="absolute left-1/2 top-4 h-6 w-32 -translate-x-1/2 rounded-full bg-black/40"></div>
-				<div class="absolute inset-x-6 bottom-8 top-20 rounded-2xl border border-white/10 bg-white/5 p-4">
-					<p class="text-sm font-medium text-slate-200">Screenshot placeholder</p>
-					<p class="mt-2 text-xs text-slate-400">390 × 844</p>
+				<div class="absolute inset-x-6 bottom-8 top-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+					<img src="/screenshot/home.png" alt="Captura principal de Univalle App" class="h-full w-full object-cover" loading="eager" />
 				</div>
 			</div>
 		</div>
