@@ -1,5 +1,19 @@
 ---
 import '../styles/global.css'
+
+interface Props {
+	title?: string
+	description?: string
+	path?: string
+}
+
+const {
+	title = 'Univalle App',
+	description = 'Aplicación no oficial para estudiantes de la Universidad del Valle',
+	path = '/'
+} = Astro.props
+
+const canonicalUrl = new URL(path, Astro.url).toString()
 ---
 <!doctype html>
 <html lang="es">
@@ -9,10 +23,21 @@ import '../styles/global.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Univalle App</title>
-		<meta name="description" content="Aplicación no oficial para estudiantes de la Universidad del Valle" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta name="robots" content="index,follow" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={new URL('/favicon.svg', Astro.url).toString()} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="theme-color" content="#0f172a" />
 	</head>
-	<body>
+	<body class="bg-slate-950 text-slate-100 antialiased">
 		<slot />
 	</body>
 </html>
