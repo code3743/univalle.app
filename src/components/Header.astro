@@ -1,15 +1,34 @@
+---
+const baseUrl = import.meta.env.BASE_URL || '/';
+---
 <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
 	<div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-		<a href="/" class="flex items-center gap-3">
-			<img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Logo Univalle App" class="h-9 w-9 rounded-lg border border-white/10 bg-slate-900 p-1" />
+		<a href={baseUrl} class="flex items-center gap-3">
+			<img src={`${baseUrl}favicon.svg`} alt="Logo Univalle App" class="h-9 w-9 rounded-lg border border-white/10 bg-slate-900 p-1" />
 			<span class="text-sm font-semibold tracking-wide text-slate-100 sm:text-base">Univalle App</span>
 		</a>
 		<nav class="flex items-center gap-4 text-sm text-slate-300">
 			<a href="#features" class="transition hover:text-white">Funciones</a>
 			<a href="#screenshots" class="transition hover:text-white">Screenshots</a>
-			<a href="/privacy" class="rounded-full border border-white/20 px-3 py-1.5 transition hover:border-[#EE322F] hover:text-white">
+			<a href={`${baseUrl}privacy`} class="rounded-full border border-white/20 px-3 py-1.5 transition hover:border-[#EE322F] hover:text-white">
 				Privacidad
 			</a>
 		</nav>
 	</div>
 </header>
+
+
+<script>
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+	const href = link.getAttribute('href');
+	const baseUrl = import.meta.env.BASE_URL || '/';
+	const pathWithoutBase = window.location.pathname.replace(baseUrl, '/');
+	if (pathWithoutBase === '/privacy' && (href === '#features' || href === '#screenshots')) {
+	  event.preventDefault();
+	  window.location.href = `${baseUrl}${href}`;
+	}
+  });
+});
+</script>
